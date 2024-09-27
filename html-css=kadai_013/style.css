@@ -1,0 +1,118 @@
+/* PC、スマホ共通スタイル */
+body {
+    max-width: 1080px;
+    margin: 0 auto 0 auto;
+    font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+ }
+  
+  /* ヘッダー */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* ここを追加 */
+    padding: 20px; /* 適宜調整 */
+}
+  
+/* PCナビゲーションのレイアウト */
+#nav-pc {
+    font-size: 16px;
+    
+  }
+  
+  #nav-pc ul {
+    display: flex;
+    padding-left: 0;
+  }
+
+  #nav-pc li {
+    list-style: none;
+  }
+  
+  /* ナビゲーションのリンクの装飾設定 */
+  #nav-pc a {
+    text-decoration: none;
+    margin-left: 60px;
+    color: #0d0d0d;
+  }
+  
+  #nav-pc a:hover {
+    text-decoration: underline;
+  }
+ #main-visual>img{width:100%; ;}
+ h1{font-weight: bold;}
+
+/* PC用ナビゲーション（デフォルト表示） */
+#nav-pc {
+  display: block;
+}
+
+/* ハンバーガーメニュー */
+#menu-sp, #nav-sp {
+  display: none;
+}
+
+/* スマートフォン用のスタイルを指定する */
+@media screen and (max-width: 767px) {
+  #nav-pc {
+    display: none;
+  }
+  
+  #menu-sp {
+    display: block; /* ハンバーガーメニューを表示 */
+  }
+  
+  #nav-sp {
+    display: none; /* 初期状態で非表示 */
+  }
+}
+
+/* PC用ナビゲーション非表示 */
+@media screen and (min-width: 768px) {
+  #nav-pc {
+    display: block;
+  }
+  
+  #menu-sp, #nav-sp {
+    display: none; /* ハンバーガーメニューを非表示 */
+  }
+}
+
+ #menu-sp{float: right;
+    padding: 0;}
+#nav-sp{background-color:#ce933e ;
+position: absolute;
+left:0;
+top:0;
+height:100%;
+width: 100%;
+display: none;
+z-index: 100;
+}
+
+#nav-sp li{list-style: none;}
+#nav-sp ul{padding-left;}
+
+#close{position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+#logp-sp{margin: 80px auto 80px auto;
+}
+#nav-sp a{display: block;}
+#nav-sp a:link{color:#ffffff ;}
+#nav-sp a:visited{color: #ffffff;}
+#nav-sp a:hover{color: #ffffff;
+text-decoration: none;}
+#nav-sp a:active{color: #ffffff;
+}
+#nav-sp .menu{text-decoration: none;
+display: block;
+margin: 30px  10px;
+height: 35px;
+font-size: 16px;
+ background-image: url("images/arrow.png");
+background-repeat:no-repeat;
+background-position: right top;}
